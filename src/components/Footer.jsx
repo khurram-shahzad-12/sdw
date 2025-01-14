@@ -3,6 +3,7 @@ import { socialMediaIcons } from "./headercom/MobileMenuItem";
 import Image from "next/image";
 import { FooterBottomMenu } from "./footercom/FooterMenu";
 import FooterLinks from "./footercom/FooterLinks";
+import PromotionEmail from "./footercom/PromotionEmail";
 
 const Footer = () => {
   return (
@@ -28,25 +29,7 @@ const Footer = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-span-2 lg:col-span-3 lg:flex lg:items-end">
-                <form className="w-full">
-                  <label htmlFor="UserEmail" className="sr-only"> Email </label>
-                  <div
-                    className="border border-gray-100 p-2 focus-within:ring sm:flex sm:items-center sm:gap-4">
-                    <input
-                      type="email"
-                      id="UserEmail"
-                      placeholder="spicedirectwholesale@gmail.com"
-                      className="w-full border-none focus:border-transparent focus:ring-transparent sm:text-sm"
-                    />
-                    <button
-                      className="mt-1 w-full bg-primary px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none hover:bg-secondary sm:mt-0 sm:w-auto sm:shrink-0"
-                    >
-                      Sign Up
-                    </button>
-                  </div>
-                </form>
-              </div>
+              <PromotionEmail/>
               <FooterLinks/>
               <ul className="col-span-2 flex justify-start gap-6 lg:col-span-5 lg:justify-end">
                 {

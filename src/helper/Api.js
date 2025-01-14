@@ -454,6 +454,24 @@ const deletesupplierslider = async (id) => {
     return [];
   }
 }
+const registerpromotionemail = async (rbody) => {
+  try {
+    const config = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(rbody),
+      cache: 'no-store',
+    };
+    const response =await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/register_promo_email`, config)
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.log('Error registering email address', error);
+    return [];
+  }
+}
 const call_api = {
   getallcategories,
   getallproducts,
@@ -484,5 +502,6 @@ const call_api = {
   addsupplierslider,
   getallsupplierimages,
   deletesupplierslider,
+  registerpromotionemail,
 };
 export default call_api;
