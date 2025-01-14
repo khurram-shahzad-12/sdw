@@ -2,21 +2,10 @@ import dbConnect from "@/lib/db";
 import BlogModel from "@/models/blogSchema";
 import { handleError } from "@/utils/errorHandler";
 import { handleSuccess } from "@/utils/handleSuccess";
+import { saveImageFile } from "@/utils/uploadImages";
 import fs from 'fs';
 import path from "path";
 
-const saveImageFile = async (file, uploadDirectory) => {
-    try {
-        const fileName = `${Date.now()}-${file.name}`;
-        const filePath = path.join(uploadDirectory, fileName);
-
-        const buffer = Buffer.from(await file.arrayBuffer());
-        fs.writeFileSync(filePath, buffer);
-        return fileName;
-    } catch (error) {
-        handleError(error, "Error saving the image File")
-    }
-}
 export async function POST(request) {
     try {
         const formData = await request.formData();
