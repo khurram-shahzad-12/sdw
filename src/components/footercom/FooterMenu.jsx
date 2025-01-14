@@ -12,11 +12,7 @@ export const FooterMenu = [
                 id:301,
                 subItemName: 'Franchise Services',
                 link: '#'
-            },{
-                id:302,
-                subItemName: 'Customer Services',
-                link: '#'
-            },
+            }
         ]
 
     },{
@@ -26,7 +22,7 @@ export const FooterMenu = [
             {
                 id:320,
                 subItemName: 'About',
-                link: '#'
+                link: '/aboutus'
             },{
                 id:321,
                 subItemName: 'Meet the Team',
@@ -40,7 +36,7 @@ export const FooterMenu = [
             {
                 id:330,
                 subItemName: 'Contact',
-                link: '#'
+                link: '/customer_service'
             },{
                 id:331,
                 subItemName: 'Franchise With Us',
@@ -76,7 +72,7 @@ export const FooterMenu = [
         subitems:[
             {
                 id:350,
-                subItemName: 'our Mission',
+                subItemName: 'Our Mission',
                 link: '#'
             },{
                 id:351,
@@ -85,7 +81,7 @@ export const FooterMenu = [
             },{
                 id:352,
                 subItemName: 'Customer Services',
-                link: '#'
+                link: '/customer_service'
             },
         ]
 
