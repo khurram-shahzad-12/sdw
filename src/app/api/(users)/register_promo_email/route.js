@@ -11,6 +11,6 @@ export async function POST(request) {
         if(!resp){return handleError(null, "Error created new user")};
         return handleSuccess(null, null, "Register successfully")
     } catch (error) {
-        if(error.code === 11000){return handleError(null, 'email already exist, choose different email')};
+        if(error.code === 11000){return handleError(null, 'email already exist')};
         return handleError(error, error.message)}
 }

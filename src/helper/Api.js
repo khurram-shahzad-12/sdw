@@ -472,6 +472,52 @@ const registerpromotionemail = async (rbody) => {
     return [];
   }
 }
+const getallterms = async() => {
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/get_terms_conditions`);
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.log("Error fetching data", error);
+    return [];
+  }
+}
+const upsertterms = async (rbody) => {
+  try {
+    const config = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(rbody),
+      cache: 'no-store',
+    };
+    const response =await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/upsert_terms_conditions`, config)
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.log('Error adding subcategory', error);
+    return [];
+  }
+}
+const adddynamicterms = async (rbody) => {
+  try {
+    const config = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(rbody),
+      cache: 'no-store',
+    };
+    const response =await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/add_new_dynamic_terms`, config)
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.log('Error adding subcategory', error);
+    return [];
+  }
+}
 const call_api = {
   getallcategories,
   getallproducts,
@@ -503,5 +549,8 @@ const call_api = {
   getallsupplierimages,
   deletesupplierslider,
   registerpromotionemail,
+  getallterms,
+  upsertterms,
+  adddynamicterms,
 };
 export default call_api;

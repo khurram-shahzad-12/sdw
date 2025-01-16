@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { corevalues } from "./CoreValues";
+import Link from "next/link";
 
 const Blog = ({ blog }) => {
     return (
@@ -70,8 +71,8 @@ const Blog = ({ blog }) => {
                     ))
                 }
             </div>
-            <div className="p-2">
-                <button className="bg-warningcolor rounded-sm w-full text-white md:text-2xl sm:text-sm font-medium p-4 hover:bg-white hover:text-warningcolor shadow-2xl">Check Our Special Offers</button>
+            <div className="">
+                <Link href={`/product?offers=special_offers`} className="bg-warningcolor block text-center rounded-sm text-white md:text-2xl sm:text-sm font-medium p-4 hover:bg-white hover:text-warningcolor shadow-2xl">Check Our Special Offers</Link>
             </div>
 
             <div className="w-full sm:mt-4">

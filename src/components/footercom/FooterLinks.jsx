@@ -12,7 +12,7 @@ const FooterLinks = () => {
                             fmenu && fmenu.subitems.map((item, index) => (
                                 <ul className="mt-6 space-y-4 text-sm" key={index}>
                                     <li>
-                                        <Link href={`${item.link}`} className="text-medium transition hover:text-secondary"> {item.subItemName} </Link>
+                                        <Link href={`${item.link}`} className="text-medium transition hover:text-secondary text-gray-600 font-medium"> {item.subItemName} </Link>
                                     </li>
                                 </ul>
                             ))

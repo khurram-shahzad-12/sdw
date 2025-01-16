@@ -83,7 +83,19 @@ export const NavBarItems = [
                 link: "/admin/editblog", 
             },
 		]
-	},
+	},{
+        id: "6",
+		name: "Terms & Conditions",
+        icon: <AiOutlineProduct />,
+		
+		subItems: [
+			{ 
+                id: "360",
+                name: "Update Terms & conditions", 
+                link: "/admin/update_terms_&_conditions",
+            },
+		]
+	}
 	
 ];
 

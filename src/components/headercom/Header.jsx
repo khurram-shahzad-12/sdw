@@ -10,6 +10,7 @@ import call_api from '@/helper/Api';
 import { MobileMenuItem } from './MobileMenuItem';
 import { useRouter } from 'next/navigation'
 import NavigationBar from './NavigationBar';
+import Link from 'next/link';
 
 const Header = () => {
   const [dropdown, setDropdown] = useState([]);
@@ -56,8 +57,8 @@ const Header = () => {
 
   return (
     <header>
-      <HeaderNewsBar />
-      <div className={`absolute bg-gray-200 h-full shadow-md z-30 w-4/6 ${hamBurgerMenu ? 'block' : "hidden"}`} >
+      <HeaderNewsBar/>
+      <div className={`fixed top-0 bg-gray-200 h-full shadow-md z-30 w-4/6 ${hamBurgerMenu ? 'block' : "hidden"}`} >
         <div className='flex justify-end pt-2 pr-4'>
           <IoClose className='text-xl text-gray-500 ' onClick={hamBurgerHandler} />
         </div>
@@ -65,13 +66,13 @@ const Header = () => {
           <span className='w-12 h-12'>
             <Image
               src={`/logo/spicedirectlognobg.png`}
-              width={200}
-              height={200}
+              width={100}
+              height={100}
               alt="Spice Direct Logo"
               className='object-cover w-full h-full'
             />
           </span>
-          <span className='text-sm text-gray-600 ml-2 border-b-2 border-gray-400'>Spice Direct Wholesale</span>
+          <Link href={`/`} className='text-sm text-gray-600 ml-2 border-b-2 border-gray-400'>Spice Direct Wholesale</Link>
         </div>
         <div className='pt-4 h-4/5 overflow-scroll'>
           {
@@ -102,13 +103,13 @@ const Header = () => {
           <p className="px-5 text-center text-[10px] text-secondary" >Spice_Direct_Wholesale_Copyright @2025</p>
         </div>
       </div>
-      <SearchBar closeDropDownHandler={closeDropDownHandler}/>
+      <SearchBar closeDropDownHandler={closeDropDownHandler} />
       <NavigationBar
-      hamBurgerHandler = {hamBurgerHandler}
-      openDropDownHandler ={openDropDownHandler}
-      closeDropDownHandler = {closeDropDownHandler}
-      dropdown = {dropdown}
-      dropdownOpen = {dropdownOpen}
+        hamBurgerHandler={hamBurgerHandler}
+        openDropDownHandler={openDropDownHandler}
+        closeDropDownHandler={closeDropDownHandler}
+        dropdown={dropdown}
+        dropdownOpen={dropdownOpen}
       />
       <FeatureSection />
     </header>

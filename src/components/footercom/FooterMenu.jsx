@@ -55,16 +55,12 @@ export const FooterMenu = [
             {
                 id:340,
                 subItemName: 'Terms & Conditions',
-                link: '#'
+                link: '/terms&conditions'
             },{
                 id:341,
                 subItemName: 'Return Policy',
-                link: '#'
-            },{
-                id:342,
-                subItemName: 'Refund Policy',
-                link: '#'
-            },
+                link: '/terms&conditions/return_policy'
+            }
         ]
     },{
         id : 5,

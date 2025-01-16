@@ -10,7 +10,7 @@ const PromotionEmail = () => {
         const rbody = {email};
         const resp = await call_api.registerpromotionemail(rbody);
         if(resp.success){setMsg("register successfully")}
-        else{setMsg("cannot register")}
+        else{setMsg(resp.message)}
     }
   return (
     <div className="col-span-2 lg:col-span-3 lg:flex lg:items-end">

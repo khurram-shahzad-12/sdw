@@ -127,6 +127,12 @@ export const MobileMenuItem = [
         icon: < BiCategory  />,   
         link:'/customer_service',     
         subItems: []
+    },{
+        id: "8",
+        name: "Back to Home",
+        icon: < BiCategory  />,   
+        link:'/',     
+        subItems: []
     },
     
 ];
